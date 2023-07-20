@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/turno"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar nuevo turno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-item>
+    <ion-label >Horario de entrada</ion-label>
+    <ion-input id="horarioE" type="time"  ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Horario de salida</ion-label>
+    <ion-input id="horarioS" type="time"  ></ion-input>
+  </ion-item>
+ 
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select id="tipo"value="" multiple="false"  interface="action-sheet"  placeholder="Seleccionar Tipo">
+        <ion-select-option value="matutino">Matutino</ion-select-option>
+        <ion-select-option value="vespertino">Vespertino</ion-select-option>
+        <ion-select-option value="nocturno">Nocturno</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+  <ion-item *ngIf="validacion=='no'" ngClass="color">
+    <ion-label color="danger" >Error, Todos los campos deben estar completos.</ion-label>
+  </ion-item>
+<ion-button (click)="agregarTurno()" expand="block" fill="clear" shape="round">
+  Agregar
+</ion-button>
+</ion-content>
+

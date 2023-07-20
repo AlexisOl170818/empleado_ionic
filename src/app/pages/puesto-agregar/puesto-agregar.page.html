@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/turno"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Agregar Nuevo Puesto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">Nombre del puesto</ion-label>
+      <ion-input id="nombreP" type="text"  ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Salario</ion-label>
+      <ion-input id="salario" type="number"  ></ion-input>
+    </ion-item>
+    
+    <ion-item *ngIf="validacion=='no'" ngClass="color">
+      <ion-label color="danger" >Error, Todos los campos deben estar completos.</ion-label>
+    </ion-item>
+  <ion-button (click)="agregarPuesto()" expand="block" fill="clear" shape="round">
+    Agregar
+  </ion-button>
+  </ion-list>
+  
+</ion-content>
+
+

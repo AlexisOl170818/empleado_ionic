@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/empleado"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Actualizar Empleado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    
+    <ion-item>
+      <ion-label  position="floating">RFC</ion-label>
+      <ion-input id="rfc" type="text" [value]="empleado.rfc" ></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label  position="floating">Nombre del Empleado</ion-label>
+      <ion-input id="nombreE" type="text"  [value]="empleado.nombreE" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Edad</ion-label>
+      <ion-input id="edadE" type="number"  [value]="empleado.edadE" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Domicilio</ion-label>
+      <ion-input id="domE" type="text"  [value]="empleado.domE" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Telefono</ion-label>
+      <ion-input id="tel" type="number"   [value]="empleado.tel"></ion-input>
+    </ion-item>
+    <!--
+     
+    
+    
+    <ion-item *ngIf="validacion=='no'" ngClass="color">
+      <ion-label color="danger" >Error, Todos los campos deben estar completos.</ion-label>
+    </ion-item>
+    -->
+    <ion-item>
+      <ion-label>Area</ion-label>
+      <ion-select id="cveArea"  [value]="empleado.cveArea" multiple="false"interface="action-sheet" placeholder="Selecciona un Area">
+        <ion-select-option *ngFor="let area of areas" [value]="area.cveArea">{{area.nombre}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Puesto</ion-label>
+      <ion-select id="cvePuesto"  [value]="empleado.cvePuesto" multiple="false"interface="action-sheet" placeholder="Selecciona un Puesto">
+        <ion-select-option *ngFor="let puesto of puestos" [value]="puesto.cvePuesto">{{puesto.nombreP}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Horario</ion-label>
+      <ion-select id="cveTurno" [value]="empleado.cveTurno" multiple="false"interface="action-sheet" placeholder="Selecciona un Turno">
+          
+        <ion-select-option *ngFor="let turno of turnos" [value]="turno.cveTurno">Horario: {{turno.tipo}};  {{turno.horaE}} -  {{turno.horaS}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="validacion=='LI'" ngClass="color">
+      <ion-label color="danger" >El RFC debe ser de 13 caracteres.</ion-label>
+    </ion-item>
+    
+  <ion-button (click)="actualizarEmpleado()" expand="block" fill="clear" shape="round">
+    Actualizar
+  </ion-button>
+  </ion-list>
+  
+</ion-content>
+
+

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/turno"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Actualizar Puesto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-list>
+    <ion-item>
+      <ion-label  position="floating">Nombre del puesto</ion-label>
+      <ion-input id="nombreP" type="text" [value]="puesto.nombreP" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating" >Salario</ion-label>
+      <ion-input id="salario" type="number" [value]="puesto.salario" ></ion-input>
+    </ion-item>
+  </ion-list>
+  
+<ion-button (click)="actualizarPuesto()" expand="block" fill="clear" shape="round">
+  Actualizar
+</ion-button>
+</ion-content>
+

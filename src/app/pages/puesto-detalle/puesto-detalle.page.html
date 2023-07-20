@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="turno"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle del Puesto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Clave del Puesto: {{puesto.cvePuesto}}</ion-card-title>
+      <ion-card-subtitle><h1><b>Nombre: {{puesto.nombreP}}</b></h1></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+     
+      <b>Salario:</b> {{puesto.salario}}
+      
+      
+     
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/turno"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Actualizar Turno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label >Horario de entrada</ion-label>
+    <ion-input id="horarioE" type="time" [value]="turno.horaE" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label >Horario de salida</ion-label>
+    <ion-input id="horarioS" type="time"  [value]="turno.horaS" ></ion-input>
+  </ion-item>
+  
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select id="tipo"  [value]="turno.tipo" multiple="false"  interface="action-sheet"  placeholder="Seleccionar Tipo">
+        <ion-select-option value="matutino">Matutino</ion-select-option>
+        <ion-select-option value="vespertino">Vespertino</ion-select-option>
+        <ion-select-option value="nocturno">Nocturno</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+  
+<ion-button (click)="actualizarTurno()" expand="block" fill="clear" shape="round">
+  Actualizar
+</ion-button>
+</ion-content>

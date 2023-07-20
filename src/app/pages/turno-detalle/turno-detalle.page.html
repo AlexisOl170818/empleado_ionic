@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="turno"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle del Turno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Clave del Turno: {{turno.cveTurno}}</ion-card-title>
+      <ion-card-subtitle><b>Tipo: {{turno.tipo}}</b></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+     <ul>
+      <li><b>Entrada:</b> {{turno.horaE}}</li>
+      <li><b>Salida:</b> {{turno.horaE}}</li>
+      
+     </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

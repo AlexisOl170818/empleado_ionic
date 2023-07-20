@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="empleado"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Informacion de empleado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>RFC: {{empleado.rfc}}</ion-card-title>
+      <ion-card-subtitle><h2><b>Nombre: {{empleado.nombreE}}</b></h2></ion-card-subtitle>
+      <ion-card-subtitle><h5><b>Edad: {{empleado.edadE}}</b></h5></ion-card-subtitle>
+      <ion-card-subtitle><h5><b>Domicilio: {{empleado.domE}}</b></h5></ion-card-subtitle>
+      <ion-card-subtitle><h5><b>Telefono: {{empleado.tel}}</b></h5></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+     
+      <ul>
+        <li><b>Area:</b> {{empleado.nombreA}}</li>
+        <li><b>Puesto:</b> {{empleado.nombreP}}</li>
+        <li><b>Horario:</b> {{empleado.tipo}}</li>
+        <li><b>Hora de entrada:</b> {{empleado.horaE}}</li>
+        <li><b>Hora de salida:</b> {{empleado.horaS}}</li>
+        
+       </ul>
+      
+      
+     
+    </ion-card-content>
+  </ion-card>
+</ion-content>
